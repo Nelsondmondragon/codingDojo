@@ -21,6 +21,7 @@ public class AlfredQuotes {
 
     public String dateAnnouncement() {
         // TU CÓDIGO AQUÍ
+        System.out.println(new Date());
         Format dateFormat = new SimpleDateFormat("EEEEE, d MMMMM yyyy HH:mm:ss Z", new Locale("es", "CO"));
         return "Actualmente es " + dateFormat.format(new Date());
     }

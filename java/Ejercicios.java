@@ -15,15 +15,23 @@ public class Ejercicios {
          * 2018, en cuenta regresiva de 4 en 4.
          */
 
-        basic();
-        System.out.println();
-        multipliFive();
-        System.out.println();
-        count();
-        System.out.println();
-        sum();
-        System.out.println();
-        regresivo();
+        // basic();
+        // System.out.println();
+        // multipliFive();
+        // System.out.println();
+        // count();
+        // System.out.println();
+        // sum();
+        // System.out.println();
+        // regresivo();
+
+        /*
+         * Crea un método que reciba un arreglo de enteros y regrese su sumatoria
+         */
+
+        /*
+         * Crea un método que reciba un arreglo de enteros y regrese el número mayor
+         */
 
     }
 

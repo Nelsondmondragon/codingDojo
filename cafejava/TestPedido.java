@@ -13,44 +13,33 @@ public class TestPedido {
 
         Articulo articulo1 = new Articulo("moka", 360000);
         Articulo articulo2 = new Articulo("latter", 40000);
-        // Articulo articulo3 = new Articulo("cafe de goteo", 260000);
+        Articulo articulo3 = new Articulo("cafe de goteo", 260000);
         Articulo articulo4 = new Articulo("capuchino", 50000);
 
         Pedido pedido1 = new Pedido();
         Pedido pedido2 = new Pedido();
-        Pedido pedido3 = new Pedido();
-        Pedido pedido4 = new Pedido();
+        Pedido pedido3 = new Pedido("Nelson");
+        Pedido pedido4 = new Pedido("Juan");
+        Pedido pedido5 = new Pedido("Gustavo");
 
-        pedido1.name = "Cindhuri";
-        pedido2.name = "Jimmy";
-        pedido3.name = "Noah";
-        pedido4.name = "Sam";
+        pedido1.addArticulo(articulo1);
+        pedido1.addArticulo(articulo2);
 
-        pedido2.items.add(articulo1);
+        pedido2.addArticulo(articulo3);
+        pedido2.addArticulo(articulo4);
 
-        pedido3.items.add(articulo4);
-        pedido3.total += articulo4.price;
+        pedido3.addArticulo(articulo2);
+        pedido3.addArticulo(articulo3);
 
-        pedido4.items.add(articulo2);
-        pedido4.total += articulo2.price;
+        pedido4.addArticulo(articulo4);
+        pedido4.addArticulo(articulo1);
 
-        pedido1.state = true;
+        pedido5.addArticulo(articulo2);
+        pedido5.addArticulo(articulo4);
 
-        pedido4.items.add(articulo2);
-        pedido4.items.add(articulo2);
+        pedido3.display();
 
-        pedido4.total += articulo2.price;
-        pedido4.total += articulo2.price;
+        System.out.println(pedido3.getStatusMessage());
 
-        pedido2.state = true;
-
-        System.out.println(pedido1);
-        System.out.println("llllllllllllllllllllllllll");
-        // 0
-
-        // System.out.println();
-        System.out.printf("Nombre: %s\n", pedido1.name);
-        System.out.printf("Total: %s\n", pedido1.total);
-        System.out.printf("Listo: %s\n", pedido1.state);
     }
 }

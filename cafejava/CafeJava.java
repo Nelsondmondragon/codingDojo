@@ -1,3 +1,4 @@
+package cafejava;
 public class CafeJava {
     public static void main(String[] args) {
         // VARIABLES DE LA APP
@@ -8,7 +9,7 @@ public class CafeJava {
         String mensajeMostrarTotal = "Tu total es $";
 
         // Variables de menú (agrega las tuyas a continuación)
-        double precioMocha = 3.5;
+        // double precioMocha = 3.5;
         double precioCafeLitro = 3.5;
         double precioCafeLeche = 4;
         double precioCapuchino = 5;
@@ -20,9 +21,9 @@ public class CafeJava {
         String cliente4 = "Noah";
 
         // Finalizaciones de pedidos (agrega las tuyas a continuación)
-        boolean estaListoOrden1 = false;
+        // boolean estaListoOrden1 = false;
         boolean estaListoOrden2 = true;
-        boolean estaListoOrden3 = false;
+        // boolean estaListoOrden3 = false;
         boolean estaListoOrden4 = true;
 
         // SIMULACIÓN DE INTERACCIÓN DE APP(Agrega tu código para los desafíos a

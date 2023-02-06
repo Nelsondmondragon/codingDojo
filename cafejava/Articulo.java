@@ -3,6 +3,7 @@ package cafejava;
 public class Articulo {
     private String name;
     private double price;
+    private int index;
 
     Articulo(String name, double price) {
         this.name = name;
@@ -25,4 +26,11 @@ public class Articulo {
         this.price = price;
     }
 
+    public int getIndex() {
+        return this.index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
 }

@@ -1,6 +1,6 @@
-package cafejava;
+package coffeedore64;
 
-public class Articulo {
+class Articulo {
     private String name;
     private double price;
     private int index;

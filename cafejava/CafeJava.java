@@ -1,3 +1,4 @@
+package cafejava;
 public class CafeJava {
     public static void main(String[] args) {
         // VARIABLES DE LA APP

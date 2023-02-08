@@ -1,4 +1,4 @@
-package cafejava;
+package desafiobarista;
 
 public class TestPedido {
 

@@ -1,4 +1,4 @@
-package guardianazoologico;
+package com.condingdojo.guardianzoologico;
 
 public class Mamifero {
 

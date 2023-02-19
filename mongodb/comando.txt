@@ -1,0 +1,31 @@
+{
+    first_name: "Nelson",
+    last_name: "Cortes"
+}
+
+show dbs;
+use admin;
+use intro_mongo;
+db.createCollection("estudiantes");
+db.estudiantes.insert({first_name:"Nelson",last_name:"De troya", age:"age", belt:"yellow"});
+db.estudiantes.insert({first_name:"Diego",last_name:"De troya", age:"age", belt:"black"});
+db.estudiantes.find();
+db.estudiantes.pretty();
+
+db.estudiantes.find({first_name:"Nelson"});
+
+
+db.estudiantes.find().sort({first_name:1, last_name:-1}).pretty();
+
+
+
+
+db.estudiantes.upate({first_name:"Nelson"2852})
+
+
+
+
+
+db.estudiantes.update({first_name: "Juana"}, {first_name: "Juanita", last_name: "De Arco", age: "21", belt: "black"})
+db.estudiantes.update({first_name: "Juanita"}, {$set: {age: "22"}})
+db.estudiantes.updateMany({}, {$set: {age: "22"}})  

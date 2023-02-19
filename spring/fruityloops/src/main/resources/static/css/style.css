@@ -1,0 +1,11 @@
+table{	
+	border: 20px solid;
+	border-color: pink;
+}
+
+
+th {
+	  border-collapse: collapse;
+	
+	border-style:solid;
+}

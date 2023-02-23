@@ -1,0 +1,23 @@
+body {
+  width: 100%;
+}
+
+h1 {
+  width: 25%;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.container {
+  background: #3a98b9;
+  width: 20%;
+  height: 60vh;
+  margin: 0 auto;
+  border: 0.2rem solid black;
+  padding: 3rem;
+  /* text-align: center; */
+}
+
+a {
+  margin-left: 47%;
+}

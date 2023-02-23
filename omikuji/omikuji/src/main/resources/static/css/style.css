@@ -1,0 +1,41 @@
+body{
+    width: 100%;
+}
+
+h1{
+    width: 25%;
+    text-align: center;
+    margin: 1rem auto;
+    
+}
+
+.container{
+    width: 30%;
+    margin: 0 auto;
+    border: .2rem solid black;
+    padding: 3rem;
+    /* text-align: center; */
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.container form .button{
+    align-self: end;
+    width: 5rem;
+    height: 2rem;
+}
+
+.number{
+    width: 15%;
+}
+
+.text{
+    width: 70%;
+}
+
+.container form textarea{
+    resize: none;
+}

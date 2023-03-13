@@ -1,0 +1,116 @@
+
+
+
+db.dropDatabase();
+
+//1
+use mi_primera_db;
+
+
+//2
+db.createCollection("estudiantes");
+
+//4
+db.estudiantes.insertOne({nombre: "Nelson", estado_hogar: "California", numero_suerte: 5, cumpleanos: {mes: 03, dia: 03, anio: 1999}});
+
+db.estudiantes.insertOne({nombre: "Juan", estado_hogar: "Washington", numero_suerte: 2, cumpleanos: {mes: 06, dia: 09, anio: 1989}});
+
+db.estudiantes.insertOne({nombre: "Elkin", estado_hogar: "Colombia", numero_suerte: 5, cumpleanos: {mes: 03, dia: 23, anio: 1969}});
+
+db.estudiantes.insertOne({nombre: "Roberto", estado_hogar: "California", numero_suerte: 0, cumpleanos: {mes: 08, dia: 13, anio: 1359}});
+
+db.estudiantes.insertOne({nombre: "Adolfo", estado_hogar: "Alemania", numero_suerte: 11, cumpleanos: {mes: 05, dia: 30, anio: 1989}});
+
+//5
+db.estudiantes.find({}).pretty();
+
+//6
+db.estudiantes.find({
+	$or:[
+	{estado_hogar:"California"},
+	{estado_hogar:"Washington"}
+	]
+}).pretty();
+
+//7.1
+db.estudiantes.find({numero_suerte:{$gt:3}}).pretty();
+
+
+//7.2
+db.estudiantes.find({numero_suerte:{$lte:10}}).pretty();
+
+//7.3
+db.estudiantes.find({
+	$and:[
+		{numero_suerte:{$gte:1}},
+		{numero_suerte:{$lte:9}}
+	]
+}).pretty();
+
+//8
+db.estudiantes.updateMany({}, {$set: {intereses: ["codificacion", "brunch", "MongoDB"]}})
+
+
+//9
+db.estudiantes.update({ _id: ObjectId("640d596f528eec9c7cd6890a")},{$push:{intereses:'Jugar play'}});
+
+
+db.estudiantes.update({ _id: ObjectId("640d596f528eec9c7cd6890b")},{$push:{intereses:'Jugar volley'}});
+
+db.estudiantes.update({ _id: ObjectId("640d596f528eec9c7cd6890c")},{$push:{intereses:'Estudiar'}});
+
+
+db.estudiantes.update({  _id: ObjectId("640d596f528eec9c7cd6890d")},{$push:{intereses:'Leer comics'}});
+
+db.estudiantes.update({ _id: ObjectId("640d596f528eec9c7cd6890e")},{$push:{intereses:'Comer'}});
+
+
+
+
+//10
+db.estudiantes.update({ _id: ObjectId("640d596f528eec9c7cd6890e")},{$push:{intereses:'Impuestos'}})
+db.estudiantes.find({}).pretty();
+
+
+//11.
+db.estudiantes.update({ _id: ObjectId("640d596f528eec9c7cd6890e")},{$pop:{intereses:1}});
+db.estudiantes.find({}).pretty();
+
+
+//12
+db.estudiantes.deleteMany({
+	$or:[
+	{estado_hogar:"California"}	]
+});
+db.estudiantes.find({}).pretty();
+
+//13
+db.estudiantes.deleteOne({nombre:'Elkin'});
+db.estudiantes.find({}).pretty();
+
+//14
+db.estudiantes.deleteOne({numero_suerte:{$gt:5}});
+db.estudiantes.find({}).pretty();
+
+//15
+db.estudiantes.updateMany({}, {$set: {numero_de_cinturones:0}});
+db.estudiantes.find({}).pretty();
+
+//16
+db.estudiantes.updateMany({estado_hogar: "Washington"}, {$inc:{numero_de_cinturones:1}});
+db.estudiantes.find({}).pretty();
+
+
+//17
+db.estudiantes.updateMany({},{$rename: { "numero_de_cinturones": "cinturones_ganados" } })
+db.estudiantes.find({}).pretty();
+
+//18
+db.estudiantes.update({},{$unset:{"numero_suerte":""}});
+db.estudiantes.find({}).pretty();
+
+
+//19
+db.estudiantes.updateMany({}, {$set: {actualizado_en: new Date()}});
+db.estudiantes.find({}).pretty();
+
